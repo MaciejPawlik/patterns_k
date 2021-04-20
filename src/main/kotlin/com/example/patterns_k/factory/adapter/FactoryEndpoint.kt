@@ -1,6 +1,7 @@
-package com.example.patterns_k.factory.endpoint
+package com.example.patterns_k.factory.adapter
 
-import com.example.patterns_k.factory.impl.MealFactory
+import com.example.patterns_k.factory.usecase.AddMealUseCase
+import com.example.patterns_k.factory.usecase.MealFactory
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -12,5 +13,9 @@ import org.springframework.web.bind.annotation.RestController
 internal class FactoryEndpoint(val factory: MealFactory) {
 
     @PostMapping("/factories")
-    internal fun addProduct(@RequestBody input: MealDto) = factory.createMeal(input.type, input.productName, input.quantity)
+    internal fun addProduct(@RequestBody input: MealDto) = factory.addMealCommand(AddMealUseCase.AddMealCommand(
+        input.type,
+        input.productName,
+        input.quantity
+    ))
 }

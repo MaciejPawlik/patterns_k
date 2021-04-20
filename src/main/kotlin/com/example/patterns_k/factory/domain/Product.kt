@@ -1,4 +1,4 @@
-package com.example.patterns_k.factory.model
+package com.example.patterns_k.factory.domain
 
 import java.time.LocalDateTime
 
