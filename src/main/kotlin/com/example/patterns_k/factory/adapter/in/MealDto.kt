@@ -1,4 +1,4 @@
-package com.example.patterns_k.factory.adapter
+package com.example.patterns_k.factory.adapter.`in`
 
 import com.example.patterns_k.factory.domain.MealType
 
