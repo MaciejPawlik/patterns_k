@@ -1,4 +1,4 @@
-package com.example.patterns_k.factory.domain
+package com.example.patterns_k.meal.domain
 
 data class Snack(val product: Product, val weight: Int) : Meal {
     override fun getCalories(): Int = product.calories * weight

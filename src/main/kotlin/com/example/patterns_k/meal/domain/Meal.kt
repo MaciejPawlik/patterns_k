@@ -1,4 +1,4 @@
-package com.example.patterns_k.factory.domain
+package com.example.patterns_k.meal.domain
 
 interface Meal {
     fun getCalories(): Int

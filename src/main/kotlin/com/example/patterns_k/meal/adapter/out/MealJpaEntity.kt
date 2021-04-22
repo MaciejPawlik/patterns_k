@@ -1,10 +1,10 @@
-package com.example.patterns_k.factory.adapter.out
+package com.example.patterns_k.meal.adapter.out
 
 import javax.persistence.*
 
 @Entity
 @Table(name = "meals")
-class MealEntity(
+class MealJpaEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private var id: Long? = null,

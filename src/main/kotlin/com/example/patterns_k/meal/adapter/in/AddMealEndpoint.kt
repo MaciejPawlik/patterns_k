@@ -1,6 +1,6 @@
-package com.example.patterns_k.factory.adapter.`in`
+package com.example.patterns_k.meal.adapter.`in`
 
-import com.example.patterns_k.factory.port.`in`.AddMealUseCase
+import com.example.patterns_k.meal.application.port.`in`.AddMealUseCase
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
