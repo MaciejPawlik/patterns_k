@@ -4,7 +4,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "meals")
-class MealJpaEntity(
+internal class MealJpaEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private var id: Long? = null,
