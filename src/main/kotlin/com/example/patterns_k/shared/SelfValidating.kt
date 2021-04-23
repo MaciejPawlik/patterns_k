@@ -1,13 +1,11 @@
 package com.example.patterns_k.shared
 
-import io.vavr.control.Validation
-
 interface SelfValidating {
 
-    fun validateSelf(validations: Sequence<Validation<String, Boolean>>) = if (validations.all { it.isValid }) true else throw DataValidationError(
-        validations
-            .filter { it.isInvalid }
-            .map { it.error }
+    fun validateSelf(conditions: Sequence<Pair<Boolean, String>>) = if (conditions.all { it.first }) true else throw DataValidationError(
+        conditions
+            .filter { !it.first }
+            .map { it.second }
             .joinToString()
     )
 }
