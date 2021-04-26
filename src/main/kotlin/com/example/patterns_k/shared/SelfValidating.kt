@@ -6,6 +6,5 @@ interface SelfValidating {
         conditions
             .filter { !it.first }
             .map { it.second }
-            .joinToString()
     )
 }

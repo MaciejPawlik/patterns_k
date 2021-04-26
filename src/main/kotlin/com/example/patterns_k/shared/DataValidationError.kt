@@ -1,4 +1,4 @@
 package com.example.patterns_k.shared
 
-class DataValidationError(message: String) : IllegalArgumentException(message) {
+data class DataValidationError(val messages: Sequence<String>): Throwable() {
 }
