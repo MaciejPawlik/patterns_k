@@ -1,5 +1,6 @@
 package com.example.patterns_k.meal.application
 
+import com.example.patterns_k.meal.adapter.out.MealId
 import com.example.patterns_k.meal.application.port.out.AddMealPort
 import com.example.patterns_k.meal.domain.DrinkCreator
 import com.example.patterns_k.meal.domain.SnackCreator
@@ -11,7 +12,7 @@ internal class AddMealService(val addMealPort: AddMealPort) : AddMealUseCase {
 
     private val factories = listOf(DrinkCreator(), SnackCreator()).associateBy { it.getType() }
 
-    override fun addMealCommand(meal: AddMealUseCase.AddMealCommand): Long = addMealPort.addMeal(
+    override fun addMealCommand(meal: AddMealUseCase.AddMealCommand): MealId = addMealPort.addMeal(
         factories.getValue(meal.type).createMeal(meal.productName, meal.quantity)
     )
 }

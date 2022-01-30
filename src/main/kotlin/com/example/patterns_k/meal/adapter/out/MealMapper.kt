@@ -5,5 +5,5 @@ import org.springframework.stereotype.Component
 
 @Component
 internal class MealMapper {
-    fun mapToMealEntity(meal: Meal) = MealJpaEntity(null, meal.getProductName(), meal.getCalories(), meal.getQuantity())
+    fun mapToMealEntity(meal: Meal) = MealMongoEntity(null, meal.getProductName(), meal.getCalories(), meal.getQuantity())
 }
